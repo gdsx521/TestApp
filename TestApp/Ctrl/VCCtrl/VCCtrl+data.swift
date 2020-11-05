@@ -13,6 +13,19 @@ import UIKit
 @objc extension VCCtrl{
     
     func initData(){
+        DJSQliteTools.getAllListData { [weak self](arr) in
+            guard let datas = arr,datas.count > 0 else{
+                return
+            }
+            if let dictV:NSDictionary = datas[0] as? NSDictionary {
+                if dictV.allKeys.count > 0 {
+                    self?.lastData = (dictV.allValues[0] as? String) ?? ""
+                    self?.reloadData()
+                }
+            }
+        }
+        
+    
         self.startTime()
     }
     
@@ -44,6 +57,7 @@ import UIKit
                     return
                 }
                 self?.lastData = jsonStr
+                DJSQliteTools.saveData(jsonStr)
                 DispatchQueue.main.async {
                     self?.reloadData()
                 }

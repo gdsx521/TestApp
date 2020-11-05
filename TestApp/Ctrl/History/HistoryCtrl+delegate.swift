@@ -24,14 +24,26 @@ extension HistoryCtrl:UITableViewDataSource,UITableViewDelegate {
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCell.CellStyle.value1,reuseIdentifier: "CellID")
         }
+        cell?.backgroundColor = UIColor.white
+        cell?.textLabel?.backgroundColor = UIColor.clear
+        cell?.textLabel?.tintColor = UIColor.clear
         cell?.textLabel?.font = UIFont.systemFont(ofSize: 15)
         cell?.textLabel?.textColor = UIColor.black
-        cell?.textLabel?.text = self.datas[indexPath.row]
+        if let dictV:NSDictionary = self.datas[indexPath.row] as? NSDictionary {
+            if dictV.allKeys.count > 0 {
+                cell?.textLabel?.text = (dictV.allKeys[0] as? String) ?? ""
+            }
+        }
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let value = "1112222"
+        var value = ""
+        if let dictV:NSDictionary = self.datas[indexPath.row] as? NSDictionary {
+            if dictV.allValues.count > 0 {
+                value = (dictV.allValues[0] as? String) ?? ""
+            }
+        }
         let ctrl = VCCtrl()
         ctrl.lastData = value
         ctrl.hidesBottomBarWhenPushed = true

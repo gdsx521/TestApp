@@ -25,7 +25,7 @@ class VCCtrl: UIViewController {
     func configUI(){
         
         //导航栏右边按钮
-        let rightNavItem = UIBarButtonItem.init(title: "查看更多历史记录", style: UIBarButtonItem.Style.done, target: self, action: #selector(rightNavItemClick))
+        let rightNavItem = UIBarButtonItem.init(title: "更多历史", style: UIBarButtonItem.Style.done, target: self, action: #selector(rightNavItemClick))
         self.navigationItem.rightBarButtonItem = rightNavItem
         
         let viewWidth = self.view.bounds.size.width

@@ -13,11 +13,12 @@ import UIKit
 class HistoryCtrl: UIViewController {
     
     var table:UITableView?
-    var datas:[String] = []
+    var datas:[[String:String]] = [[:]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()
+        self.initData()
     }
     
     func configUI(){
