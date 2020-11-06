@@ -14,7 +14,7 @@ class VCCtrl: UIViewController {
     var lastData:String? //上次请求的记录
     var textView:UITextView?
     var timer:Timer? //定时器
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,10 @@ class VCCtrl: UIViewController {
         //导航栏右边按钮
         let rightNavItem = UIBarButtonItem.init(title: "更多历史", style: UIBarButtonItem.Style.done, target: self, action: #selector(rightNavItemClick))
         self.navigationItem.rightBarButtonItem = rightNavItem
+        
+        //导航栏左边按钮
+        let leftNavItem = UIBarButtonItem.init(title: "web页面", style: UIBarButtonItem.Style.done, target: self, action: #selector(leftNavItemClick))
+        self.navigationItem.leftBarButtonItem = leftNavItem
         
         let viewWidth = self.view.bounds.size.width
         let viewHeight = self.view.bounds.size.height
@@ -63,6 +67,13 @@ class VCCtrl: UIViewController {
     
     deinit {
         self.stopTimeUpdate()
+    }
+    
+    @objc func leftNavItemClick(){
+        let ctrl = WebCtrl()
+        ctrl.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(ctrl, animated: true)
+        
     }
     
 }

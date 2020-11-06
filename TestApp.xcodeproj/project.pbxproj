@@ -22,6 +22,11 @@
 		5102A06425541AF000EA6370 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5102A05E25541A9000EA6370 /* SQLite.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5102A06725541B1200EA6370 /* DJSQliteTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A06625541B1200EA6370 /* DJSQliteTools.swift */; };
 		5102A06925541F2B00EA6370 /* HistoryCtrl+data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A06825541F2B00EA6370 /* HistoryCtrl+data.swift */; };
+		5145DC8E25552BEF009FD395 /* ZipArchiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DC8C25552BEB009FD395 /* ZipArchiveSDK.framework */; };
+		5145DC8F25552BEF009FD395 /* ZipArchiveSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DC8C25552BEB009FD395 /* ZipArchiveSDK.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5145DC9225552C6B009FD395 /* WebCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC9125552C6B009FD395 /* WebCtrl.swift */; };
+		5145DC9425552CB2009FD395 /* html.zip in Resources */ = {isa = PBXBuildFile; fileRef = 5145DC9325552CB2009FD395 /* html.zip */; };
+		51D892C3255536E1004F6F22 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519070FF25553289004B26C2 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5145DC8F25552BEF009FD395 /* ZipArchiveSDK.framework in Embed Frameworks */,
 				5102A06425541AF000EA6370 /* SQLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +83,11 @@
 		5102A06225541ADA00EA6370 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5102A06625541B1200EA6370 /* DJSQliteTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJSQliteTools.swift; sourceTree = "<group>"; };
 		5102A06825541F2B00EA6370 /* HistoryCtrl+data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryCtrl+data.swift"; sourceTree = "<group>"; };
+		5145DC8C25552BEB009FD395 /* ZipArchiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchiveSDK.framework; sourceTree = "<group>"; };
+		5145DC9125552C6B009FD395 /* WebCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCtrl.swift; sourceTree = "<group>"; };
+		5145DC9325552CB2009FD395 /* html.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = html.zip; sourceTree = "<group>"; };
+		519070FE2555327D004B26C2 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		519070FF25553289004B26C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5145DC8E25552BEF009FD395 /* ZipArchiveSDK.framework in Frameworks */,
 				5102A06325541AF000EA6370 /* SQLite.framework in Frameworks */,
+				51D892C3255536E1004F6F22 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +175,8 @@
 		5102A0462554075D00EA6370 /* Ctrl */ = {
 			isa = PBXGroup;
 			children = (
+				5145DC9525552CB8009FD395 /* source */,
+				5145DC9025552C60009FD395 /* webCtrl */,
 				5102A0542554165D00EA6370 /* VCCtrl */,
 				5102A0512554115F00EA6370 /* History */,
 			);
@@ -191,6 +206,7 @@
 		5102A05D25541A9000EA6370 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				5145DC8C25552BEB009FD395 /* ZipArchiveSDK.framework */,
 				5102A05E25541A9000EA6370 /* SQLite.framework */,
 			);
 			path = framework;
@@ -207,9 +223,27 @@
 		5102A06125541ADA00EA6370 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				519070FF25553289004B26C2 /* WebKit.framework */,
+				519070FE2555327D004B26C2 /* libc++abi.tbd */,
 				5102A06225541ADA00EA6370 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5145DC9025552C60009FD395 /* webCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				5145DC9125552C6B009FD395 /* WebCtrl.swift */,
+			);
+			path = webCtrl;
+			sourceTree = "<group>";
+		};
+		5145DC9525552CB8009FD395 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				5145DC9325552CB2009FD395 /* html.zip */,
+			);
+			path = source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +353,7 @@
 			files = (
 				5102A0182553FF0500EA6370 /* LaunchScreen.storyboard in Resources */,
 				5102A0152553FF0500EA6370 /* Assets.xcassets in Resources */,
+				5145DC9425552CB2009FD395 /* html.zip in Resources */,
 				5102A0132553FF0300EA6370 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +381,7 @@
 			files = (
 				5102A05C2554166F00EA6370 /* HistoryCtrl+delegate.swift in Sources */,
 				5102A00C2553FF0300EA6370 /* AppDelegate.swift in Sources */,
+				5145DC9225552C6B009FD395 /* WebCtrl.swift in Sources */,
 				5102A0532554151500EA6370 /* HistoryCtrl.swift in Sources */,
 				5102A06725541B1200EA6370 /* DJSQliteTools.swift in Sources */,
 				5102A0582554165D00EA6370 /* VCCtrl.swift in Sources */,
@@ -524,7 +560,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PXB44ETBNH;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestApp/framework",
@@ -535,8 +574,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.test.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huazhu.newHTone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = htone_inhouse_product;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,7 +586,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PXB44ETBNH;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestApp/framework",
@@ -557,8 +600,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.test.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huazhu.newHTone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = htone_inhouse_product;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

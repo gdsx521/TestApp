@@ -1,0 +1,11 @@
+framework module ZipArchiveSDK {
+  umbrella header "ZipArchiveSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module ZipArchiveSDK.Swift {
+    header "ZipArchiveSDK-Swift.h"
+    requires objc
+}
