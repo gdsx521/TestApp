@@ -28,10 +28,6 @@ class VCCtrl: UIViewController {
         let rightNavItem = UIBarButtonItem.init(title: "更多历史", style: UIBarButtonItem.Style.done, target: self, action: #selector(rightNavItemClick))
         self.navigationItem.rightBarButtonItem = rightNavItem
         
-        //导航栏左边按钮
-        let leftNavItem = UIBarButtonItem.init(title: "web页面", style: UIBarButtonItem.Style.done, target: self, action: #selector(leftNavItemClick))
-        self.navigationItem.leftBarButtonItem = leftNavItem
-        
         let viewWidth = self.view.bounds.size.width
         let viewHeight = self.view.bounds.size.height
         let outViewWidth = viewWidth - 12 * 2
@@ -67,13 +63,6 @@ class VCCtrl: UIViewController {
     
     deinit {
         self.stopTimeUpdate()
-    }
-    
-    @objc func leftNavItemClick(){
-        let ctrl = WebCtrl()
-        ctrl.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(ctrl, animated: true)
-        
     }
     
 }
