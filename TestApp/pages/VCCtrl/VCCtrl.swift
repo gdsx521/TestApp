@@ -15,7 +15,7 @@ class VCCtrl: UIViewController {
     
     var topLabel:UILabel?
     var lastData:String? //上次请求的记录
-    var textView:UITextView?    
+    var textView:UITextView?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,8 +20,11 @@ extension VCCtrl{
         let _  = Observable<Int>.interval(RxTimeInterval.seconds(5), scheduler: MainScheduler()).subscribe(onNext: { (state) in
             self.postData()
         }, onError: { (error) in
+            
         }, onCompleted: {
+            
         }, onDisposed: {
+            
         })
     }
     
