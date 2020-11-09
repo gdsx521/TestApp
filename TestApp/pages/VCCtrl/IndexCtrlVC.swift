@@ -77,6 +77,7 @@ class IndexCtrlVC: UIViewController {
         textView?.font = UIFont.systemFont(ofSize: 15)
         textView?.text = ""
         textView?.textColor = UIColor.black
+        self.view.backgroundColor = UIColor.white
     }
 
 
