@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class VCCtrl: UIViewController {
+    let bag = DisposeBag()
     
     var topLabel:UILabel?
     var lastData:String? //上次请求的记录
-    var textView:UITextView?
-    var timer:Timer? //定时器
-    
+    var textView:UITextView?    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,7 @@ class VCCtrl: UIViewController {
     }
     
     deinit {
-        self.stopTimeUpdate()
+        
     }
     
 }
