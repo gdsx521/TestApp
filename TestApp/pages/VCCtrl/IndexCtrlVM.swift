@@ -1,33 +1,54 @@
 //
-//  VCCtrl+data.swift
+//  VCCtrlVM.swift
 //  TestApp
 //
-//  Created by mac on 2020/11/5.
+//  Created by mac on 2020/11/9.
 //  Copyright © 2020 mac. All rights reserved.
 //
 
 import Foundation
-import UIKit
+import RxSwift
+import RxCocoa
 
-//代理
-@objc extension VCCtrl{
+class IndexCtrlVM:BaseViewModel {
+        
     
-    func initData(){
+    var dataStr:String? //固定值,不使用定时器
+    let dataObserver = BehaviorRelay<String>(value: "") //使用定时器,每隔5秒获取新值
+    
+    
+    func reloadData(){
+        
+        if let dataStr = self.dataStr,dataStr.count > 0  {
+            self.dataObserver.accept(dataStr)
+            return
+        }
+        
         DJSQliteTools.getAllListData { [weak self](arr) in
             guard let datas = arr,datas.count > 0 else{
                 return
             }
-            if let dictV:NSDictionary = datas[0] as? NSDictionary {
+            if let dictV = datas[0] as? NSDictionary {
                 if dictV.allKeys.count > 0 {
-                    self?.lastData = (dictV.allValues[0] as? String) ?? ""
-                    self?.reloadData()
+                    let resData = (dictV.allValues[0] as? String) ?? ""
+                    self?.dataObserver.accept(resData)
                 }
             }
         }
         
-    
-        self.startTime()
+        
+        let _  = Observable<Int>.interval(RxTimeInterval.milliseconds(5000), scheduler: MainScheduler.instance).subscribe(onNext: { (state) in
+            self.postData()
+        }, onError: { (error) in
+            
+        }, onCompleted: {
+            
+        }, onDisposed: {
+            
+        })
     }
+    
+    
     
     //启动5秒后请求
     func postData(){
@@ -53,25 +74,18 @@ import UIKit
                 guard let responseDataD = responseData as? [String : Any] else {
                     return
                 }
-                guard let jsonStr = self?.dictToJson(responseDataD) else {
+                guard let resData = self?.dictToJson(responseDataD) else {
                     return
                 }
-                self?.lastData = jsonStr
-                DJSQliteTools.saveData(jsonStr)
-                DispatchQueue.main.async {
-                    self?.reloadData()
-                }
+                DJSQliteTools.saveData(resData)
+                self?.dataObserver.accept(resData)
                 
             }catch{}
         }
         task.resume()
         
     }
-    
-    func reloadData(){
-        self.textView?.text = self.lastData ?? "上次记录为空"
-    }
-    
+
     func dictToJson(_ dic:[String : Any]) -> String?{
         let data = try? JSONSerialization.data(withJSONObject: dic, options: [])
         let str = String(data: data!, encoding: String.Encoding.utf8)

@@ -13,15 +13,14 @@
 		5102A0182553FF0500EA6370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5102A0162553FF0500EA6370 /* LaunchScreen.storyboard */; };
 		5102A0232553FF0500EA6370 /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A0222553FF0500EA6370 /* TestAppTests.swift */; };
 		5102A02E2553FF0500EA6370 /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A02D2553FF0500EA6370 /* TestAppUITests.swift */; };
-		5102A0532554151500EA6370 /* HistoryCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A0522554151500EA6370 /* HistoryCtrl.swift */; };
-		5102A0582554165D00EA6370 /* VCCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A0552554165D00EA6370 /* VCCtrl.swift */; };
-		5102A0592554165D00EA6370 /* VCCtrl+timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A0562554165D00EA6370 /* VCCtrl+timer.swift */; };
-		5102A05A2554165D00EA6370 /* VCCtrl+data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A0572554165D00EA6370 /* VCCtrl+data.swift */; };
-		5102A05C2554166F00EA6370 /* HistoryCtrl+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A05B2554166F00EA6370 /* HistoryCtrl+delegate.swift */; };
+		5102A0532554151500EA6370 /* HistoryCtrlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A0522554151500EA6370 /* HistoryCtrlVC.swift */; };
+		5102A0582554165D00EA6370 /* IndexCtrlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A0552554165D00EA6370 /* IndexCtrlVC.swift */; };
 		5102A06325541AF000EA6370 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5102A05E25541A9000EA6370 /* SQLite.framework */; };
 		5102A06425541AF000EA6370 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5102A05E25541A9000EA6370 /* SQLite.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5102A06725541B1200EA6370 /* DJSQliteTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A06625541B1200EA6370 /* DJSQliteTools.swift */; };
-		5102A06925541F2B00EA6370 /* HistoryCtrl+data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102A06825541F2B00EA6370 /* HistoryCtrl+data.swift */; };
+		518FF321255939740004BDB2 /* IndexCtrlVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF320255939740004BDB2 /* IndexCtrlVM.swift */; };
+		518FF32325593DDD0004BDB2 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF32225593DDD0004BDB2 /* BaseViewModel.swift */; };
+		518FF325255945BF0004BDB2 /* HistoryCtrlVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF324255945BF0004BDB2 /* HistoryCtrlVM.swift */; };
 		9318E51859ECBA7436B04A8C /* Pods_TestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB2284F9C3706005E95146B /* Pods_TestAppTests.framework */; };
 		E9398A960D17C70ACDCDF706 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F0C76E0BE475412D3694C3 /* Pods_TestApp.framework */; };
 /* End PBXBuildFile section */
@@ -74,15 +73,14 @@
 		5102A0292553FF0500EA6370 /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5102A02D2553FF0500EA6370 /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
 		5102A02F2553FF0500EA6370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5102A0522554151500EA6370 /* HistoryCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCtrl.swift; sourceTree = "<group>"; };
-		5102A0552554165D00EA6370 /* VCCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCCtrl.swift; sourceTree = "<group>"; };
-		5102A0562554165D00EA6370 /* VCCtrl+timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VCCtrl+timer.swift"; sourceTree = "<group>"; };
-		5102A0572554165D00EA6370 /* VCCtrl+data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VCCtrl+data.swift"; sourceTree = "<group>"; };
-		5102A05B2554166F00EA6370 /* HistoryCtrl+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryCtrl+delegate.swift"; sourceTree = "<group>"; };
+		5102A0522554151500EA6370 /* HistoryCtrlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCtrlVC.swift; sourceTree = "<group>"; };
+		5102A0552554165D00EA6370 /* IndexCtrlVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCtrlVC.swift; sourceTree = "<group>"; };
 		5102A05E25541A9000EA6370 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SQLite.framework; sourceTree = "<group>"; };
 		5102A06225541ADA00EA6370 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5102A06625541B1200EA6370 /* DJSQliteTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJSQliteTools.swift; sourceTree = "<group>"; };
-		5102A06825541F2B00EA6370 /* HistoryCtrl+data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryCtrl+data.swift"; sourceTree = "<group>"; };
+		518FF320255939740004BDB2 /* IndexCtrlVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCtrlVM.swift; sourceTree = "<group>"; };
+		518FF32225593DDD0004BDB2 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		518FF324255945BF0004BDB2 /* HistoryCtrlVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCtrlVM.swift; sourceTree = "<group>"; };
 		519070FE2555327D004B26C2 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		519070FF25553289004B26C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A4F0C76E0BE475412D3694C3 /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +173,7 @@
 		5102A0462554075D00EA6370 /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				518FF32225593DDD0004BDB2 /* BaseViewModel.swift */,
 				5102A0542554165D00EA6370 /* VCCtrl */,
 				5102A0512554115F00EA6370 /* History */,
 			);
@@ -184,9 +183,8 @@
 		5102A0512554115F00EA6370 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				5102A0522554151500EA6370 /* HistoryCtrl.swift */,
-				5102A05B2554166F00EA6370 /* HistoryCtrl+delegate.swift */,
-				5102A06825541F2B00EA6370 /* HistoryCtrl+data.swift */,
+				5102A0522554151500EA6370 /* HistoryCtrlVC.swift */,
+				518FF324255945BF0004BDB2 /* HistoryCtrlVM.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -194,9 +192,8 @@
 		5102A0542554165D00EA6370 /* VCCtrl */ = {
 			isa = PBXGroup;
 			children = (
-				5102A0552554165D00EA6370 /* VCCtrl.swift */,
-				5102A0562554165D00EA6370 /* VCCtrl+timer.swift */,
-				5102A0572554165D00EA6370 /* VCCtrl+data.swift */,
+				5102A0552554165D00EA6370 /* IndexCtrlVC.swift */,
+				518FF320255939740004BDB2 /* IndexCtrlVM.swift */,
 			);
 			path = VCCtrl;
 			sourceTree = "<group>";
@@ -457,14 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5102A05C2554166F00EA6370 /* HistoryCtrl+delegate.swift in Sources */,
+				518FF321255939740004BDB2 /* IndexCtrlVM.swift in Sources */,
+				518FF325255945BF0004BDB2 /* HistoryCtrlVM.swift in Sources */,
 				5102A00C2553FF0300EA6370 /* AppDelegate.swift in Sources */,
-				5102A0532554151500EA6370 /* HistoryCtrl.swift in Sources */,
+				5102A0532554151500EA6370 /* HistoryCtrlVC.swift in Sources */,
 				5102A06725541B1200EA6370 /* DJSQliteTools.swift in Sources */,
-				5102A0582554165D00EA6370 /* VCCtrl.swift in Sources */,
-				5102A06925541F2B00EA6370 /* HistoryCtrl+data.swift in Sources */,
-				5102A0592554165D00EA6370 /* VCCtrl+timer.swift in Sources */,
-				5102A05A2554165D00EA6370 /* VCCtrl+data.swift in Sources */,
+				518FF32325593DDD0004BDB2 /* BaseViewModel.swift in Sources */,
+				5102A0582554165D00EA6370 /* IndexCtrlVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
